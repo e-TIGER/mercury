@@ -156,11 +156,10 @@
     $("#lanuch_page").show();
     var govTrackId;
     var role;
-    var district = function(x){
-      for (var i in x.results){
-        if (x.results[i].district !== 'null'){
-          return x.results[i].district;
-        }
+    var district;
+    for (var i in x.results) {
+      if (x.results[i].district !== 'null'){
+        district = x.results[i].district;
       }
     }
     $("#launch_page").prepend("<div class='col-xs-12 col-md-offset-2 col-md-8 text-center'><h1>you live in congressional district "+district+" for your state.</br>your house representative and senators are</h1></div>")
