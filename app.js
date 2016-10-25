@@ -158,7 +158,7 @@
     var role;
     var district;
     for (var i in x.results) {
-      if (x.results[i].district !== 'null'){
+      if (x.results[i].chamber == 'house'){
         district = x.results[i].district;
       }
     }
