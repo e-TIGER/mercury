@@ -156,7 +156,14 @@
     $("#lanuch_page").show();
     var govTrackId;
     var role;
-    $("#launch_page").prepend("<div class='col-xs-12 col-md-offset-2 col-md-8 text-center'><h1>you live in congressional district "+x.results[0].district+" for your state.</br>your house representative and senators are</h1></div>")
+    var district = function(x){
+      for (var i in x.results){
+        if (x.results[i].district !== 'null'){
+          return x.results[i].district;
+        }
+      }
+    }
+    $("#launch_page").prepend("<div class='col-xs-12 col-md-offset-2 col-md-8 text-center'><h1>you live in congressional district "+district+" for your state.</br>your house representative and senators are</h1></div>")
      $("#launch_page").append("<button type='button' class='btn btn-default' id="+x.results[0].govtrack_id+">"+"("+x.results[0].chamber+") "+x.results[0].first_name+" "+x.results[0].last_name+" "+x.results[0].party+"</button></br>"); 
       $("#"+x.results[0].govtrack_id).on("click",function(){
         displayRound++;
