@@ -162,8 +162,8 @@
         district = x.results[i].district;
       }
     }
-    $("#launch_page").prepend("<div class='col-xs-12 col-md-offset-2 col-md-8 text-center'><h1>you live in congressional district "+district+" for your state.</br>your house representative and senators are</h1></div>")
-     $("#launch_page").append("<button type='button' class='btn btn-default' id="+x.results[0].govtrack_id+">"+"("+x.results[0].chamber+") "+x.results[0].first_name+" "+x.results[0].last_name+" "+x.results[0].party+"</button></br>"); 
+    $("#launch_page").prepend("<div class='col-xs-12 col-md-offset-2 col-md-8 text-center'><h1>you live in congressional district "+district+" for "+state+".</br>your house representative and senators are</h1></div>")
+     $("#launch_page").append("<button type='button' class='btn btn-default' id="+x.results[0].govtrack_id+">"+x.results[0].title+" "+x.results[0].first_name+" "+x.results[0].last_name+" "+x.results[0].party+"</button></br>"); 
       $("#"+x.results[0].govtrack_id).on("click",function(){
         displayRound++;
         repName = x.results[0].first_name+" "+x.results[0].last_name+" ("+x.results[0].party+")";
@@ -174,7 +174,7 @@
         getRec(x.results[0].first_name,x.results[0].last_name,x.results[0].party,govTrackId);
         $("#vote_rec_list"+displayRound-1).hide();
       });
-    $("#launch_page").append("<button type='button' class='btn btn-default' id="+x.results[1].govtrack_id+">"+"("+x.results[1].chamber+") "+x.results[1].first_name+" "+x.results[1].last_name+" "+x.results[1].party+"</button></br>"); 
+    $("#launch_page").append("<button type='button' class='btn btn-default' id="+x.results[1].govtrack_id+">"+x.results[1].title+" "+x.results[1].first_name+" "+x.results[1].last_name+" "+x.results[1].party+"</button></br>"); 
       $("#"+x.results[1].govtrack_id).on("click",function(){
         displayRound++;
         repName = x.results[1].first_name+" "+x.results[1].last_name+" ("+x.results[1].party+")";
@@ -185,7 +185,7 @@
         getRec(x.results[1].first_name,x.results[1].last_name,x.results[1].party,govTrackId);
         $("#vote_rec_list"+displayRound-1).hide();
       });
-    $("#launch_page").append("<button type='button' class='btn btn-default' id="+x.results[2].govtrack_id+">"+"("+x.results[2].chamber+") "+x.results[2].first_name+" "+x.results[2].last_name+" "+x.results[2].party+"</button></br>"); 
+    $("#launch_page").append("<button type='button' class='btn btn-default' id="+x.results[2].govtrack_id+">"+x.results[2].title+" "+x.results[2].first_name+" "+x.results[2].last_name+" "+x.results[2].party+"</button></br>"); 
       $("#"+x.results[2].govtrack_id).on("click",function(){
         displayRound++;
         repName = x.results[2].first_name+" "+x.results[2].last_name+" ("+x.results[2].party+")";
