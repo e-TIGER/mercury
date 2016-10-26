@@ -1,7 +1,21 @@
-
-#main-display {
-  margin-top: 3em;
+body {
+  background-image: url("https://farm6.staticflickr.com/5771/30584735215_113cbaf32b_m.jpg");
+  background-size: cover;
 }
 button{
   margin: 1.5em;
+}
+ul {
+  background-color: white;
+}
+h1 {
+  color: white;
+  text-shadow: 0.05em 0.05em black;
+}
+#main-display {
+  margin-top: 3em;
+}
+
+ul {
+  background-color: white;
 }
