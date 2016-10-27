@@ -138,7 +138,7 @@
     
     $("#main-display").prepend("<div class='col-xs-12 text-center'><button type='button' class='btn btn-default btn-lg' id='upcoming_votes'>Upcoming Votes/Events</button></div>");
     
-    $("#vote_rec").prepend("<div class='col-xs-6 col-xs-offset-3'><h1 style='text-align: center;' id='heading"+displayRound+"'>"+fn+" "+ln+" ("+prt+") voted</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_rec_list"+displayRound+"'></ul></div>");
+    $("#vote_rec").prepend("<div class='col-xs-6 col-xs-offset-3'><h1 style='text-align: center;' id='heading"+displayRound+"'>"+fn+" "+ln+" ("+prt+")</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_rec_list"+displayRound+"'></ul></div>");
     
     $("#vote_sched").after("<div class='col-xs-6 text-center'><button type='button' class='btn btn-default btn-lg' id='return_to_reps'>BACK To Reps</button></div><div class='col-xs-6 text-center'><button type='button' class='btn btn-default btn-lg' id='contact'>Contact Rep</button></div>");
     
