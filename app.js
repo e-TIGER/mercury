@@ -29,7 +29,7 @@
   function tweetAgainst(ia,ai) {
      $("#against"+ia).click(function(){
        var question = ai;
-       issue = question.substring(0,98);
+       issue = question.substring(0,72);
        window.open('http://twitter.com/share?text=@'+repTwitterId+' I want you to vote against '+issue+'&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
      }); 
  }
@@ -37,7 +37,7 @@
   function tweetFor(ib,bi) {
    $("#for"+ib).click(function(){
      var question = bi;
-      issue = question.substring(0,100);
+      issue = question.substring(0,76);
      window.open('http://twitter.com/share?&text=@'+repTwitterId+' I want you to vote for '+issue+'&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
    });   
  }
@@ -99,7 +99,7 @@
  function tweetDislike(wa,wb) {
      $("#dislike"+wa).click(function(){
        var question = wb;
-       issue = question.substring(0,100);
+       issue = question.substring(0,76);
        window.open('http://twitter.com/share?text=@'+repTwitterId+' I disagree with you on '+issue+'&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
      }); 
  }
@@ -107,7 +107,7 @@
   function tweetLike(qa,qb) {
    $("#like"+qa).click(function(){
      var question = qb;
-      issue = question.substring(0,100);
+      issue = question.substring(0,79);
      window.open('http://twitter.com/share?text=@'+repTwitterId+' I agree with you on '+issue+'&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
    });   
  }
