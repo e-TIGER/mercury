@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://farm6.staticflickr.com/5771/30584735215_113cbaf32b_m.jpg");
+  background-image: url("https://farm6.staticflickr.com/5520/30303321960_82d0a837f7_c.jpg");
   background-size: cover;
 }
 button{
@@ -9,7 +9,9 @@ ul {
   background-color: white;
 }
 h1 {
-  color: white;
+  color: #eaf2ff;
+  font-size: 4em;
+  font-weight: bold;
   text-shadow: 0.05em 0.05em black;
 }
 #main-display {
