@@ -68,7 +68,7 @@
       $("#vote_rec").hide();
       $("#vote_sched").show();
       $("#upcoming_votes").hide();
-      var callChamber = rc.toUpperCase();
+      var callChamber = rc;
      var upcomingVotesApi = "https://congress.api.sunlightfoundation.com/upcoming_bills?chamber="+callChamber+"&order=scheduled_at&"+xyz+thatThing;
       $("#vote_sched").prepend("<div class='col-xs-6 col-xs-offset-3'><h1 style='text-align: center;' id='headingfut"+displayRoundFut+"'>"+repName+" "+callChamber+"</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_sched_list"+displayRoundFut+"'></ul></div>");
       $.getJSON(upcomingVotesApi, function(xd){
