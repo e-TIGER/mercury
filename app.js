@@ -140,7 +140,7 @@
     
     $("#vote_rec").prepend("<div class='col-xs-6 col-xs-offset-3'><h1 style='text-align: center;' id='heading"+displayRound+"'>"+fn+" "+ln+" ("+prt+")</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_rec_list"+displayRound+"'></ul></div>");
     
-    $("#vote_sched").after("<div class='col-xs-6 text-center'><button type='button' class='btn btn-default btn-lg' id='return_to_reps'>BACK To Reps</button></div><div class='col-xs-6 text-center'><button type='button' class='btn btn-default btn-lg' id='contact'>Contact Rep</button></div>");
+    $("#vote_sched").after("<div class='col-xs-6 text-center'><button type='button' class='btn btn-default btn-lg' id='return_to_reps'>BACK To Reps</button></div><div class='col-xs-6 text-center'><button type='button' class='btn btn-default btn-lg' id='contact'>Email Rep</button></div>");
     
     var getRecApi = "https://www.govtrack.us/api/v2/vote_voter/?person="+id+"&limit=1000&order_by=-created&format=json&fields=vote__id,created,option__value,vote__category,vote__chamber,vote__question,vote__number";// increase limit once display is set
     
