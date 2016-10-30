@@ -163,7 +163,7 @@
         district = x.results[i].district;
       }
     }
-    $("#launch_page_buttons").prepend("<div class='col-xs-8 col-xs-offset-2 text-center'><h1>"+state+" Congressional District "+district+"</br>Congressional Representatives</h1></div>")
+    $("#launch_page_buttons").prepend("<div class='col-xs-8 col-xs-offset-2 text-center'><h1>"+state+" Congressional District "+district+"</br>Representatives</h1></div>")
      $("#launch_page_buttons").append("<button type='button' class='btn btn-default btn-block btn-lg' id="+x.results[0].govtrack_id+">"+x.results[0].title+" "+x.results[0].first_name+" "+x.results[0].last_name+" ("+x.results[0].party+")</button></br>"); 
       $("#"+x.results[0].govtrack_id).on("click",function(){
         displayRound++;
