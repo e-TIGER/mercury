@@ -2,12 +2,11 @@ body {
   background-image: url("https://farm6.staticflickr.com/5520/30303321960_82d0a837f7_c.jpg");
   background-size: cover;
 }
-button{
-  margin: 1.5em;
-}
+
 ul {
   background-color: white;
 }
+
 h1 {
   color: #eaf2ff;
   font-family: 'Fjalla One', sans-serif;
@@ -15,11 +14,15 @@ h1 {
   font-weight: bold;
   text-shadow: 0.05em 0.05em black;
 }
+
+.btn{
+  margin: 0.5em;
+  border: 0.15em solid black;
+  box-shadow: 0.5em 0.5em 0.5em black;
+}
+
 #main-display {
   margin-top: 3em;
 }
 
-ul {
-  background-color: white;
-  width: 33%;
-}
+
