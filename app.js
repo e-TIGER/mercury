@@ -250,7 +250,8 @@ function intiApp() {
   $("#main-display").append("<div class='col-xs-12 center-block text-center' id='launch_page'><div class='col-xs-8 col-xs-offset-2' id='launch_page_buttons'></div></div>");
   $("#main-display").append("<div class='col-xs-12 center-block' id='vote_rec'></div>");
   $("#main-display").append("<div class='col-xs-12 center-block' id='vote_sched'></div>");
-  $("#main-display").after("<div class='col-xs-12 center-block text-center' id='vote_sched'><h2>Built with</h2><a href='http://geoservices.tamu.edu/Services/Geocode/'>Texas A&M Geocoder</a><a href='https://sunlightlabs.github.io/congress/'>Sunlight Foundation</a><a href='https://www.govtrack.us/'>GovTrack.us</a></div>");
+  $("#main-display").after('<div class="col-xs-12 center-block text-center" id="contact_us"><form class="col-xs-8 col-xs-offset-2" id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxa_XRw0e4fNlt_KJZSgFr_xfLCr1oDVXpeyfqKzI5TpWhqxzc/exec"><label for="email">join our mailing list</label><input type="email" name="email"><button type="submit" class="btn btn-default btn-lg" id="submit_email">Submit</button></form></div>');
+  $("#main-display").after("<div class='col-xs-12 center-block text-center' id='credits_for_APIs'><h2>Built with</h2><a href='http://geoservices.tamu.edu/Services/Geocode/'>Texas A&M Geocoder</a><a href='https://sunlightlabs.github.io/congress/'>Sunlight Foundation</a><a href='https://www.govtrack.us/'>GovTrack.us</a></div>");
   getGeoCode();
 }
   
