@@ -70,7 +70,7 @@
       $("#upcoming_votes").hide();
       var callChamber = rc;
      var upcomingVotesApi = "https://congress.api.sunlightfoundation.com/upcoming_bills?chamber="+callChamber+"&order=scheduled_at&"+xyz+thatThing;
-      $("#vote_sched").prepend("<div class='col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3'><h1 style='text-align: center;' id='headingfut"+displayRoundFut+"'>"+repName+"</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_sched_list"+displayRoundFut+"'></ul></div>");
+      $("#vote_sched").prepend("<div class='col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3'><h1 style='text-align: center;' id='headingfut"+displayRoundFut+"'>"+repName+"</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_sched_list"+displayRoundFut+"'></ul></div>");
       $.getJSON(upcomingVotesApi, function(xd){
           voteSchedDisplay(xd);
       });
@@ -138,7 +138,7 @@
     
     $("#main-display").prepend("<div class='col-xs-12 col-md-12 text-center'><button type='button' class='btn btn-default btn-lg' id='upcoming_votes'>Rep's Upcoming Votes</button></div>");
     
-    $("#vote_rec").prepend("<div class='col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3'><h1 style='text-align: center;' id='heading"+displayRound+"'>"+fn+" "+ln+" ("+prt+")</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_rec_list"+displayRound+"'></ul></div>");
+    $("#vote_rec").prepend("<div class='col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3'><h1 style='text-align: center;' id='heading"+displayRound+"'>"+fn+" "+ln+" ("+prt+")</h1><ul class='list-group' style='border-style: inset;border-width: 1em; height:30em; width:99%; overflow:hidden; overflow-y:scroll;' id='vote_rec_list"+displayRound+"'></ul></div>");
     
     $("#vote_sched").after("<div class='col-xs-6 col-md-6 text-center'><button type='button' class='btn btn-default btn-lg' id='return_to_reps'>BACK To Reps</button></div><div class='col-xs-6 col-md-6 text-center'><button type='button' class='btn btn-default btn-lg' id='contact'>Email Rep</button></div>");
     
@@ -163,7 +163,7 @@
         district = x.results[i].district;
       }
     }
-    $("#launch_page_buttons").prepend("<div class='col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 text-center'><h1>"+state+" Congressional District "+district+"</br>Representatives</h1></div>")
+    $("#launch_page_buttons").prepend("<div class='col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 text-center'><h1>"+state+" Congressional District "+district+"</br>Representatives</h1></div>")
      $("#launch_page_buttons").append("<button type='button' class='btn btn-default btn-block btn-lg' id="+x.results[0].govtrack_id+">"+x.results[0].title+" "+x.results[0].first_name+" "+x.results[0].last_name+" ("+x.results[0].party+")</button></br>"); 
       $("#"+x.results[0].govtrack_id).on("click",function(){
         displayRound++;
@@ -247,7 +247,7 @@
   
 function intiApp() {
   $("#main-display").append('<div class="col-xs-12 col-md-12 center-block" id="setup_page"><h1 style="text-align: center;">Enter address and</br> view your representatives in</br> Congress</h1><form class="col-xs-12 col-md-8 col-md-offset-2"><div class="form-group col-xs-12 col-md-8"><input type="text" class="form-control" id="street_address" placeholder="Street Address"></div><div class="form-group col-xs-12 col-md-4"><input type="text" class="form-control" id="apt_num" placeholder="Apt #"> </div><div class="form-group col-xs-12 col-md-4"><input type="text" class="form-control" id="city" placeholder="City"></div><div class="form-group col-xs-12 col-md-4"><div><select class="form-control" name="state" id="state"><option value="null">State</option><option value="alabama">AL</option><option value="alaska">AK</option><option value="arizona">AZ</option><option value="arkansas">AR</option><option value="california">CA</option><option value="colorado">CO</option><option value="connecticut">CT</option><option value="delaware">DE</option><option value="florida">FL</option><option value="georgia">GA</option><option value="hawaii">HI</option><option value="idaho">ID</option><option value="illinois">IL</option><option value="indiana">IN</option><option value="iowa">IA</option><option value="kansas">KS</option><option value="kentucky">KY</option><option value="louisiana">LA</option><option value="maine">ME</option><option value="maryland">MD</option><option value="massachusetts">MA</option><option value="michigan">MI</option><option value="minnesota">MN</option><option value="mississippi">MS</option><option value="missouri">MO</option><option value="montana">MT</option><option value="nebraska">NE</option><option value="nevada">NV</option><option value="new hampshire">NH</option><option value="new jersey">NJ</option><option value="new mexico">NM</option><option value="new york">NY</option><option value="north carolina">NC</option><option value="north dakota">ND</option><option value="ohio">OH</option><option value="oklahoma">OK</option><option value="oregon">OR</option><option value="pennsylvania">PA</option><option value="rhode island">RI</option><option value="south carolina">SC</option><option value="south dakota">SD</option><option value="tennessee">TN</option><option value="texas">TX</option><option value="utah">UT</option><option value="vermont">VT</option><option value="virginia">VA</option><option value="washington">WA</option><option value="west virginia">WV</option><option value="wisconsin">WI</option><option value="wyoming">WY</option></select></div></div><div class="form-group col-xs-12 col-md-4"><input type="text" class="form-control" id="zip" placeholder="Zip"></div><div class="text-center"><button type="submit" class="btn btn-default btn-lg" id="submit">Find My Reps</button></div></form></div>');  
-  $("#main-display").append("<div class='col-xs-12 col-md-12 center-block text-center' id='launch_page'><div class='col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3' id='launch_page_buttons'></div></div>");
+  $("#main-display").append("<div class='col-xs-12 col-md-12 center-block text-center' id='launch_page'><div class='col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3' id='launch_page_buttons'></div></div>");
   $("#main-display").append("<div class='col-xs-12 col-md-12 center-block' id='vote_rec'></div>");
   $("#main-display").append("<div class='col-xs-12 col-md-12 center-block' id='vote_sched'></div>");
   $("#main-display").after("<div class='col-xs-12 col-md-12 center-block text-center' id='credits_for_APIs'><h2>Built with</h2><a href='http://geoservices.tamu.edu/Services/Geocode/'>Texas A&M Geocoder</a><a href='https://sunlightlabs.github.io/congress/'>Sunlight Foundation</a><a href='https://www.govtrack.us/'>GovTrack.us</a></div>");
