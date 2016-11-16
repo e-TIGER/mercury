@@ -15,6 +15,14 @@ h1 {
   text-shadow: 0.05em 0.05em black;
 }
 
+h2,label {
+  color: #eaf2ff;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 0.05em 0.05em black;
+}
+
 .btn{
   margin: 0.5em;
   border: 0.15em solid black;
