@@ -25,7 +25,11 @@
   $(document).ready(function(){
     intiApp();
     });
-  
+ function closeSurvey() {
+  $("#survey_close").click(function(){
+    $("#survey").hide();
+  });
+ }
  function tweetAgainst(ia,ai) {
      $("#against"+ia).click(function(){
        var question = ai;
@@ -251,7 +255,7 @@ function intiApp() {
   $("#main-display").append("<div class='col-xs-12 col-md-12 center-block' id='vote_rec'></div>");
   $("#main-display").append("<div class='col-xs-12 col-md-12 center-block' id='vote_sched'></div>");
   $("#main-display").after("<div class='col-xs-12 col-md-12 center-block text-center' id='credits_for_APIs'><h2>Built with</h2><a href='http://geoservices.tamu.edu/Services/Geocode/'>Texas A&M Geocoder</a><a href='https://sunlightlabs.github.io/congress/'>Sunlight Foundation</a><a href='https://www.govtrack.us/'>GovTrack.us</a></div>");
-  $("#main-display").after('<div class="col-xs-12 col-md-4 col-md-offset-4 text-center" id="contact_us"><h2>Optional survey</h2><form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxa_XRw0e4fNlt_KJZSgFr_xfLCr1oDVXpeyfqKzI5TpWhqxzc/exec"><label for="dob">DOB</label><input type="date" class="form-control" id="dob" name="dob"><label class="control-label" for="gender">Gender</label><select class="form-control" name="gender"><option value="male">Male</option><option value="female">Female</option> <option value="other">Other</option></select><label for="email">Want updates?</label><input type="email" name="email" class="form-control" placeholder="Enter email address for updates"><button class="btn btn-default">Submit</button></form><div style="display:none;" id="thankyou_message"><h2>Thanks for helping us improve your experience!</h2></div></div>');
+  $("#main-display").after('<div class="col-xs-12 col-md-4 col-md-offset-4 text-center" id="survey"><h2>Optional survey</h2><a href="#" id="survey_close" style="dislpay: inline;">X close</a><form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxa_XRw0e4fNlt_KJZSgFr_xfLCr1oDVXpeyfqKzI5TpWhqxzc/exec"><label for="dob">DOB</label><input type="date" class="form-control" id="dob" name="dob"><label class="control-label" for="gender">Gender</label><select class="form-control" name="gender"><option value="male">Male</option><option value="female">Female</option> <option value="other">Other</option></select><label for="email">Want updates?</label><input type="email" name="email" class="form-control" placeholder="Enter email address for updates"><button class="btn btn-default">Submit</button></form><div style="display:none;" id="thankyou_message"><h2>Thanks for helping us improve your experience!</h2></div></div>');
   getGeoCode();
 }
   
