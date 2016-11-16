@@ -24,6 +24,7 @@
   
   $(document).ready(function(){
     intiApp();
+    closeSurvey();
     });
  function closeSurvey() {
   $("#survey_close").click(function(){
