@@ -1,6 +1,8 @@
 body {
   background-image: url("https://farm6.staticflickr.com/5520/30303321960_82d0a837f7_c.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 ul {
