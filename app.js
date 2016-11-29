@@ -79,7 +79,7 @@
       $.getJSON(upcomingVotesApi, function(xd){
           voteSchedDisplay(xd);
       });
-   
+      console.log(upcomingVotesApi);
     });
   }
   
